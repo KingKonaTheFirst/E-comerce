@@ -13,33 +13,33 @@ Product.init(
       type: DataTypes.INTERGER,
       allowNull: false,
       primaryKey: true,
-      autoIncriment: true,
+      autoIncriment: true
     },
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
-        isDecimal: true,
-      },
+        isDecimal: true
+      }
     },
     stock: {
       type: DataTypes.DECIMAL,
       allowNull: false,
       defaultValue: 10,
       validate: {
-        isNumeric: true,
-      },
+        isNumeric: true
+      }
     },
     category_id: {
       type: DataTypes.INTERGER,
       refrences: {
-        model: category,
-        key: id,
-      },
+        model: 'category',
+        key: 'id'
+      }
     },
   },
   {
@@ -47,7 +47,7 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "product",
+    modelName: "product"
   }
 );
 
