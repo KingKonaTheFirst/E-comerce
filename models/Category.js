@@ -7,14 +7,14 @@ class Category extends Model {}
 Category.init(
   {
     id: {
-      type: DataTypes.INTERGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncriment: true,
+      autoIncrement: true
     },
     category_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
   },
   {
@@ -22,7 +22,7 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "category",
+    modelName: "category"
   }
 );
 
